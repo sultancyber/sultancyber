@@ -18,7 +18,7 @@ I'm passionate about cybersecurity and love tackling complex challenges through 
 
 ---
 
-## 🛡 Cyber Range Work (Ongoing)
+## 🛡 Cyber Range Work
 
 I am actively enrolled in the [Skool Cyber Range](https://www.skool.com/cyber-range), where I practice real-world cybersecurity scenarios and document my progress.  
 
