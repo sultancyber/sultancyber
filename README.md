@@ -5,17 +5,14 @@ I'm passionate about cybersecurity and love tackling complex challenges through 
 ### 📜 Certifications & Achievements
 
 <div>
-  <a href"https://www.credly.com/badges/459be270-df69-4058-85ba-1119f30c1137/public_url">
-    <img src="https://images.credly.com/size/160x160/images/f6d62c5d-1e1d-4de6-92ee-8dc8c80b1c7b/blob" width="40" />
+  <a href="https://www.credly.com/badges/459be270-df69-4058-85ba-1119f30c1137/public_url">
+    <img src="https://images.credly.com/images/3746480e-1d97-41f8-b27a-0b798d235306/CompTIA_Network_2B.png" width="40" />
   </a>
-  <a href="https://www.credly.com/badges/1fa80d7e-0087-466a-baf4-0a47ca2c1005/public_url">
-    <img src="https://images.credly.com/size/160x160/images/8e6bde54-8a33-4ec0-9d70-90fcde581bcf/image.png" width="40" />
+  <a href="https://www.credly.com/badges/c5374856-9989-431e-8497-4dd3a18b2eb5/public_url">
+    <img src="https://images.credly.com/images/80d8a06a-c384-42bf-ad36-db81bce5adce/blob" width="40" />
   </a>
-  <a href="https://www.credly.com/badges/be63f763-4726-4c47-859e-12eea6d39317/public_url">
-    <img src="https://images.credly.com/size/160x160/images/c3e2745b-2f30-4e6b-9290-f7557a705181/image.png" width="40" />
-  </a>
-  <a>
-    <img src="Assets/Badges/CEH.png" width="40" />
+  <a href="#">
+    <img src="https://github.com/user-attachments/assets/b0e1c67b-6e28-44cb-bf8f-568b0ee90643" width="40" />
   </a>
 </div>
 
