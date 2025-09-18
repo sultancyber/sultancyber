@@ -24,3 +24,7 @@ Apply the related settings for this STIG.
 Example:
 PS C:> .\WN11-CC-000391.ps1
 #>
+# Disable Internet Explorer app (registry portion)
+$regPath = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer'
+if (-not (Test-Path $regPath)) { New-Item -Path $regPath -Force | Out-Null }
+Set-ItemProperty -Path $regPath -Name 'DisableInternetExplorerApp' -Value 1 -Type DWord
