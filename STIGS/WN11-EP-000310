@@ -24,3 +24,7 @@ Apply the related registry setting for this STIG.
 Example:
 PS C:> .\WN11-EP-000310.ps1
 #>
+# Block new external DMA devices when screen is locked
+$regPath = 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\Kernel DMA Protection'
+if (-not (Test-Path $regPath)) { New-Item -Path $regPath -Force | Out-Null }
+Set-ItemProperty -Path $regPath -Name 'DeviceEnumerationPolicy' -Value 0 -Type DWord
