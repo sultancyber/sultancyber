@@ -22,5 +22,13 @@ PowerShell Ver. :
 .USAGE
 Apply the related registry setting for this STIG.
 Example:
-PS C:> .\WN11-CC-000315.ps1
+PS C:> .\WN11-CC-000315
 #>
+# Disable AlwaysInstallElevated (HKLM + HKCU)
+$regPathLM = 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\Installer'
+if (-not (Test-Path $regPathLM)) { New-Item -Path $regPathLM -Force | Out-Null }
+Set-ItemProperty -Path $regPathLM -Name 'AlwaysInstallElevated' -Value 0 -Type DWord
+
+$regPathCU = 'HKCU:\Software\Policies\Microsoft\Windows\Installer'
+if (-not (Test-Path $regPathCU)) { New-Item -Path $regPathCU -Force | Out-Null }
+Set-ItemProperty -Path $regPathCU -Name 'AlwaysInstallElevated' -Value 0 -Type DWord
