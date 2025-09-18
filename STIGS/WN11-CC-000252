@@ -24,3 +24,7 @@ Apply the related registry setting for this STIG.
 Example:
 PS C:> .\WN11-CC-000252.ps1
 #>
+# Disable GameDVR (NA on Windows 11 LTSC)
+$regPath = 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\GameDVR'
+if (-not (Test-Path $regPath)) { New-Item -Path $regPath -Force | Out-Null }
+Set-ItemProperty -Path $regPath -Name 'AllowGameDVR' -Value 0 -Type DWord
