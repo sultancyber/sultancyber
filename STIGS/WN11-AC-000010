@@ -1,0 +1,41 @@
+<#
+.SYNOPSIS
+Enforces the "Account lockout threshold" to 3 invalid logon attempts.
+
+.NOTES
+Author          : Sultan Jarad
+LinkedIn        : https://www.linkedin.com/in/sultan-jarad/
+GitHub          : https://github.com/sultancyber
+Date Created    : 2025-09-17
+Last Modified   : 2025-09-17
+Version         : 1.0
+CVEs            : N/A
+Plugin IDs      : N/A
+STIG-ID         : WN11-AC-000010
+
+.TESTED ON
+Date(s) Tested  :
+Tested By       :
+Systems Tested  :
+PowerShell Ver. :
+
+.USAGE
+Apply the required registry setting to enforce the STIG.
+Example:
+PS C:\> .\WN11-AC-000010.ps1
+#>
+
+# ------------------------------------------------------------
+# Registry Fix
+# ------------------------------------------------------------
+
+# Registry path for LSA account lockout policy
+$regPath = 'HKLM:\SYSTEM\CurrentControlSet\Services\Netlogon\Parameters'
+
+# Ensure key exists
+if (-not (Test-Path $regPath)) {
+    New-Item -Path $regPath -Force | Out-Null
+}
+
+# Set Account lockout threshold (LockoutThreshold) = 3
+Set-ItemProperty -Path $regPath -Name 'LockoutThreshold' -Value 3 -Type DWord
