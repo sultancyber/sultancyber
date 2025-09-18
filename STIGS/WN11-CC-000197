@@ -24,3 +24,7 @@ Apply the related registry setting for this STIG.
 Example:
 PS C:> .\WN11-CC-000197.ps1
 #>
+# Disable Windows consumer features
+$regPath = 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\CloudContent'
+if (-not (Test-Path $regPath)) { New-Item -Path $regPath -Force | Out-Null }
+Set-ItemProperty -Path $regPath -Name 'DisableWindowsConsumerFeatures' -Value 1 -Type DWord
