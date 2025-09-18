@@ -24,3 +24,8 @@ Apply the related registry setting for this STIG.
 Example:
 PS C:> .\WN11-SO-000075.ps1
 #>
+# Configure interactive logon legal banner
+$regPath = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System'
+if (-not (Test-Path $regPath)) { New-Item -Path $regPath -Force | Out-Null }
+Set-ItemProperty -Path $regPath -Name 'LegalNoticeCaption' -Value '*** USG Warning Notice ***' -Type String
+Set-ItemProperty -Path $regPath -Name 'LegalNoticeText'    -Value 'You are accessing a U.S. Government (USG) Information System...' -Type String
