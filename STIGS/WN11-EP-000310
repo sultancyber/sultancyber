@@ -1,0 +1,26 @@
+<#
+.SYNOPSIS
+Enables Kernel DMA Protection policy by setting “DeviceEnumerationPolicy” to 0 to block new external DMA devices when the screen is locked.
+
+.NOTES
+Author          : Sultan Jarad
+LinkedIn        : https://www.linkedin.com/in/sultan-jarad/
+GitHub          : https://github.com/sultancyber
+Date Created    : 2025-09-17
+Last Modified   : 2025-09-17
+Version         : 1.0
+CVEs            : N/A
+Plugin IDs      : N/A
+STIG-ID         : WN11-EP-000310
+
+.TESTED ON
+Date(s) Tested  :
+Tested By       :
+Systems Tested  :
+PowerShell Ver. :
+
+.USAGE
+Apply the related registry setting for this STIG.
+Example:
+PS C:> .\WN11-EP-000310.ps1
+#>
