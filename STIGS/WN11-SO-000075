@@ -1,0 +1,26 @@
+<#
+.SYNOPSIS
+Configures the interactive logon legal banner (LegalNoticeText) with the required U.S. Government warning.
+
+.NOTES
+Author          : Sultan Jarad
+LinkedIn        : https://www.linkedin.com/in/sultan-jarad/
+GitHub          : https://github.com/sultancyber
+Date Created    : 2025-09-17
+Last Modified   : 2025-09-17
+Version         : 1.0
+CVEs            : N/A
+Plugin IDs      : N/A
+STIG-ID         : WN11-SO-000075
+
+.TESTED ON
+Date(s) Tested  :
+Tested By       :
+Systems Tested  :
+PowerShell Ver. :
+
+.USAGE
+Apply the related registry setting for this STIG.
+Example:
+PS C:> .\WN11-SO-000075.ps1
+#>
