@@ -24,3 +24,7 @@ Apply the related registry setting for this STIG.
 Example:
 PS C:> .\WN11-CC-000100.ps1
 #>
+# Disable WebPnP driver download
+$regPath = 'HKLM:\SOFTWARE\Policies\Microsoft\Windows NT\Printers'
+if (-not (Test-Path $regPath)) { New-Item -Path $regPath -Force | Out-Null }
+Set-ItemProperty -Path $regPath -Name 'DisableWebPnPDownload' -Value 1 -Type DWord
